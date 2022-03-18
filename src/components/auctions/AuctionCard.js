@@ -25,7 +25,7 @@ const renderer = ({ days, hours, minutes, seconds, completed, props }) => {
           <p className="card-text">{props.item.title}</p>
           <div className="d-flex jsutify-content-between align-item-center">
             <h5>
-              {hours} hr: {minutes} min: {seconds} sec
+              {hours} hrs: {minutes} min: {seconds} sec
             </h5>
           </div>
           <p className="card-text">{props.item.desc}</p>
