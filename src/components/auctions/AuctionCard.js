@@ -9,12 +9,12 @@ const renderer = ({ days, hours, minutes, seconds, completed, props }) => {
 
   return (
     <div className="col">
-      <div className="card shadow-sm">
+      <div className="card shadow-lg">
         <div
           style={{
-            height: "225px",
+            height: "180px",
             backgroundImage: `url(${props.item.imgUrl})`,
-            backgroundSize: "contain",
+            backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
           }}
@@ -28,7 +28,7 @@ const renderer = ({ days, hours, minutes, seconds, completed, props }) => {
               {hours} hrs: {minutes} min: {seconds} sec
             </h5>
           </div>
-          <p className="card-text">{props.item.desc}</p>
+          {/* <p className="card-text">{props.item.desc}</p> */}
           <div className="d-flex justify-content-between align-item-center">
             <div>
               {!props.owner ? (

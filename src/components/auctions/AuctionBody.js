@@ -12,7 +12,13 @@ export const AuctionBody = () => {
   const { docs } = useFirestore("auctions");
 
   return (
-    <div style={{ backgroundColor: "gray" }}>
+    <div style={{ backgroundColor: "#E5E5E5" }}>
+      <h1
+        class="display-5 fw-bold pt-4 text-center"
+        style={{ color: "#212529" }}
+      >
+        Ongoing Bids
+      </h1>
       <div className="py-5">
         <div className="container">
           {auction && <ProgressBar auction={auction} setAuction={setAuction} />}
@@ -22,7 +28,7 @@ export const AuctionBody = () => {
           {currentUser && <AddAuction setAuction={setAuction} />}
 
           {docs && (
-            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
               {docs.map((doc) => {
                 return <AuctionCard item={doc} key={doc.id} />;
               })}
